@@ -1,14 +1,11 @@
 import React from 'react';
 import { NavigationMenuDemo } from "./navbar";
-import { ConnectWallet } from '@coinbase/onchainkit/wallet';
-import { Avatar } from '@coinbase/onchainkit/identity';
+
 import { ConnectAndSIWE } from "./ConnectandSIWE";
 const Header = ({ 
   NavigationComponent = <NavigationMenuDemo/>, 
   WalletComponent = <ConnectAndSIWE/>, 
-  address = "0x838aD0EAE54F99F1926dA7C3b6bFbF617389B4D9",
-  AvatarComponent = <Avatar address={"0x838aD0EAE54F99F1926dA7C3b6bFbF617389B4D9"} />,
- 
+  
 }) => {
     
   // Default navigation fallback
@@ -28,16 +25,6 @@ const Header = ({
     </button>
   );
 
-  // Default avatar fallback
-  const DefaultAvatar = ({ address="0x838aD0EAE54F99F1926dA7C3b6bFbF617389B4D9" }) => (
-    address ? (
-      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center">
-        <span className="text-white text-sm font-semibold">
-          {address.slice(0, 2).toUpperCase()}
-        </span>
-      </div>
-    ) : null
-  );
 
   return (
     <header className="container mx-auto px-6 py-6">
@@ -61,12 +48,7 @@ const Header = ({
             {WalletComponent ? WalletComponent : <DefaultWallet />}
           </div>
 
-          {/* Avatar Component */}
-          {(AvatarComponent || address) && (
-            <div className="avatar-container">
-              {AvatarComponent ? AvatarComponent : <DefaultAvatar address={address} />}
-            </div>
-          )}
+         
         </div>
       </div>
     </header>

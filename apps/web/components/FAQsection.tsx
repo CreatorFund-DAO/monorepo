@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, HelpCircle, Star, Users, Shield, Zap } from 'lucide-react';
+import { ChevronDown, ChevronUp, HelpCircle, Star, Users, Shield, Zap, Heart, Globe, Eye } from 'lucide-react';
 
 const FAQSection = () => {
   const [openItems, setOpenItems] = useState(new Set([1])); // First item open by default
 
-  const toggleFAQ = (id:any) => {
+  const toggleFAQ = (id) => {
     const newOpenItems = new Set(openItems);
     if (newOpenItems.has(id)) {
       newOpenItems.delete(id);
@@ -17,58 +17,58 @@ const FAQSection = () => {
   const faqData = [
     {
       id: 1,
-      icon: <Zap className="w-5 h-5" />,
+      icon: <Shield className="w-5 h-5" />,
       category: "Getting Started",
-      question: "How do I deploy my first AI agent?",
-      answer: "Getting started is simple! Create your account, choose from our library of pre-built agents or build your own using our drag-and-drop interface. Deploy with one click to our global infrastructure. Your agent will be live and processing requests within seconds."
+      question: "How do I participate in a CreatorFUND DAO lottery?",
+      answer: "Getting started is simple! Connect your wallet, verify your identity through Civic, and browse active lotteries. Choose your numbers or use quick pick, then confirm your transaction. Your ticket is immediately recorded on-chain for complete transparency."
     },
     {
       id: 2,
-      icon: <Shield className="w-5 h-5" />,
-      category: "Security",
-      question: "How secure is my data and AI agent code?",
-      answer: "We use enterprise-grade security with end-to-end encryption, SOC 2 compliance, and isolated execution environments. Your code and data are protected by the same security standards used by Fortune 500 companies. All data is encrypted both in transit and at rest."
+      icon: <Eye className="w-5 h-5" />,
+      category: "Transparency",
+      question: "How can I verify the lottery is fair and transparent?",
+      answer: "Every lottery uses ChainLink VRF for provably fair randomness. All smart contracts are audited and open-source. You can verify winner selection, fund distribution, and every transaction on the blockchain. No hidden algorithms, no manipulation - just pure, verifiable fairness."
     },
     {
       id: 3,
-      icon: <Users className="w-5 h-5" />,
-      category: "Scaling",
-      question: "Can the platform handle high-volume requests?",
-      answer: "Absolutely! Our platform automatically scales to handle millions of requests per day. With 99.9% uptime and sub-100ms response times, your agents can handle traffic spikes seamlessly. We offer dedicated infrastructure for enterprise clients."
+      icon: <Zap className="w-5 h-5" />,
+      category: "Payouts",
+      question: "How quickly do winners receive their prizes?",
+      answer: "Winners receive funds instantly through automated smart contracts. No delays, no intermediaries, no bureaucracy. The moment the lottery ends and winners are determined, payouts are automatically distributed to your wallet."
     },
     {
       id: 4,
-      icon: <Star className="w-5 h-5" />,
-      category: "Pricing",
-      question: "What pricing plans do you offer?",
-      answer: "We offer flexible pricing starting with a free tier that includes 10,000 requests per month. Our Pro plan scales with usage, and Enterprise plans include dedicated infrastructure, priority support, and custom integrations. No hidden fees, transparent pricing."
+      icon: <Heart className="w-5 h-5" />,
+      category: "Social Impact",
+      question: "How does CreatorFUND DAO support social causes?",
+      answer: "Every lottery automatically allocates a portion of proceeds to verified NGOs and community projects. You can vote on which causes to support through our DAO governance system. We've already distributed over $5.8M to meaningful social initiatives."
     },
     {
       id: 5,
-      icon: <HelpCircle className="w-5 h-5" />,
-      category: "Support",
-      question: "What kind of support do you provide?",
-      answer: "We provide 24/7 support for all paid plans, including live chat, email support, and comprehensive documentation. Enterprise customers get dedicated account managers and priority support with guaranteed response times."
+      icon: <Users className="w-5 h-5" />,
+      category: "DAO Governance",
+      question: "How does the DAO governance system work?",
+      answer: "Token holders can propose and vote on fund allocation, new features, and supported causes. One verified person, one vote ensures democratic decision-making. The community controls the treasury and platform direction through transparent, on-chain governance."
     },
     {
       id: 6,
-      icon: <Zap className="w-5 h-5" />,
-      category: "Integration",
-      question: "How do I integrate with my existing systems?",
-      answer: "Our platform offers REST APIs, webhooks, and SDKs for popular programming languages. We also provide pre-built integrations for common tools like Slack, Discord, Zapier, and major cloud platforms. Custom integrations are available for Enterprise plans."
+      icon: <Globe className="w-5 h-5" />,
+      category: "Access",
+      question: "Can I participate from anywhere in the world?",
+      answer: "Yes! CreatorFUND DAO is globally accessible with Civic-verified identity verification. Our system is secure, privacy-preserving, and fraud-resistant. Simply verify your identity once and participate in lotteries from anywhere, anytime."
     }
   ];
 
   const categories = [...new Set(faqData.map(item => item.category))];
 
   return (
-    <section className="container mx-auto px-6 py-20">
+    <section className="bg-black min-h-screen container mx-auto px-6 py-20">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Frequently Asked <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Questions</span>
+          Frequently Asked <span className="bg-gradient-to-r from-blue-400 via-white-500 to-blue-600 bg-clip-text text-transparent">Questions</span>
         </h2>
         <p className="text-xl text-white/70 max-w-3xl mx-auto">
-          Everything you need to know about our AI agent platform
+          Everything you need to know about the world's first transparent, decentralized lottery platform
         </p>
       </div>
 
@@ -96,16 +96,16 @@ const FAQSection = () => {
               className="w-full p-6 md:p-8 text-left flex items-center justify-between hover:bg-white/5 transition-all duration-300"
             >
               <div className="flex items-center space-x-4 flex-1">
-                <div className="flex-shrink-0 p-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-lg border border-white/10">
-                  <div className="text-purple-400">
+                <div className="flex-shrink-0 p-2 bg-gradient-to-r from-pink-500/20 to-rose-500/20 rounded-lg border border-white/10">
+                  <div className="text-pink-400">
                     {item.icon}
                   </div>
                 </div>
                 <div className="flex-1">
-                  <div className="text-sm text-purple-400 font-medium mb-1 uppercase tracking-wider">
+                  <div className="text-sm text-pink-400 font-medium mb-1 uppercase tracking-wider">
                     {item.category}
                   </div>
-                  <h3 className="text-lg md:text-xl font-semibold text-white group-hover:text-purple-300 transition-colors duration-300">
+                  <h3 className="text-lg md:text-xl font-semibold text-white group-hover:text-pink-300 transition-colors duration-300">
                     {item.question}
                   </h3>
                 </div>
@@ -122,7 +122,7 @@ const FAQSection = () => {
             }`}>
               <div className="px-6 md:px-8 pb-6 md:pb-8">
                 <div className="pl-14 md:pl-16">
-                  <div className="w-full h-px bg-gradient-to-r from-purple-500/30 to-cyan-500/30 mb-6"></div>
+                  <div className="w-full h-px bg-gradient-to-r from-pink-500/30 to-rose-500/30 mb-6"></div>
                   <p className="text-white/80 leading-relaxed text-base md:text-lg">
                     {item.answer}
                   </p>
@@ -137,21 +137,21 @@ const FAQSection = () => {
       <div className="mt-16 text-center">
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12 max-w-2xl mx-auto">
           <div className="mb-6">
-            <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl border border-white/10 mx-auto flex items-center justify-center mb-4">
-              <HelpCircle className="w-8 h-8 text-purple-400" />
+            <div className="w-16 h-16 bg-gradient-to-r from-pink-500/20 to-rose-500/20 rounded-2xl border border-white/10 mx-auto flex items-center justify-center mb-4">
+              <HelpCircle className="w-8 h-8 text-pink-400" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Still have questions?</h3>
             <p className="text-white/70 mb-8">
-              Our support team is here to help you get the most out of our platform
+              Our community and support team are here to help you get started with transparent, fair lotteries
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-              Contact Support
+            <button className="px-8 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-rose-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Join Discord
             </button>
             <button className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300">
-              Join Community
+              Read Documentation
             </button>
           </div>
         </div>

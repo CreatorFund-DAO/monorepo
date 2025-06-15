@@ -25,10 +25,10 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
-              AgentMesh
+              CreatorFund DAO
               </h3>
               <p className="text-white/70 mb-6">
-                The world's leading marketplace for AI agents. Create, deploy, and monetize intelligent agents with ease.
+              The world's first fundraising platform for creators. Create fair lotteries for creators with full blockchain transparency.
               </p>
             </div>
             
@@ -61,12 +61,12 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-6">Product</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Marketplace</a></li>
-              <li><a href="#" className="text-white/70 hover:text-white transition-colors">AI Agents</a></li>
-              <li><a href="#" className="text-white/70 hover:text-white transition-colors">No-Code Builder</a></li>
-              <li><a href="#" className="text-white/70 hover:text-white transition-colors">API Access</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Create Lottery</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Browse Lotteries</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">NGO Partenership</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">DAO Governance</a></li>
               <li><a href="#" className="text-white/70 hover:text-white transition-colors">Analytics</a></li>
-              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Tranparency</a></li>
             </ul>
           </div>
 
@@ -87,7 +87,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-6">Stay Updated</h4>
             <p className="text-white/70 mb-4">
-              Get the latest updates, features, and AI insights delivered to your inbox.
+              Get notified about new lotteries, platform updates, and transparency reports.
             </p>
             <div className="space-y-3">
               <div className="flex">
@@ -123,7 +123,7 @@ const Footer = () => {
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span>support@agentmesh.com</span>
+                  <span>support@CreatorFundDAO.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,10 +162,10 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm text-white/50">
-            © 2025 AgentMesh. All rights reserved.
+            © 2025 CreatorFund DAO. All rights reserved.
           </div>
           <div className="flex items-center space-x-4 text-sm text-white/50">
-            <span>Built with ❤️ for the AI community</span>
+            <span>Built with ❤️ for the Web3 community</span>
           </div>
         </div>
       </div>

@@ -249,13 +249,13 @@ export default function HeroSection() {
       onClick={() => window.location.href = '/explore'}
       className="px-8 py-3 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-pink-500/25"
     >
-      Explore Agents
+      Explore Fundraising
     </button>
     <button 
       onClick={() => window.location.href = '/create'}
       className="px-8 py-3 border border-blue-300/40 text-blue-300 font-medium rounded-lg hover:bg-pinbluek-300/10 hover:border-blue-300/60 transition-all duration-300 backdrop-blur-sm"
     >
-      Create Agent
+      Create IP
     </button>
   </div>
 </div>
