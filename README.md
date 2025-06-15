@@ -8,7 +8,7 @@
 
 | **Step**                 | **Action**                                                           | **Flow/API Call**                                         |
 | ------------------------ | -------------------------------------------------------------------- | --------------------------------------------------------- |
-| **User visits DApp**     | Connect wallet or **Social login (via Tomo)**                        | ➔ `POST /auth/social-login` → Tomo server returns address |
+| **User visits DApp**     |  **Social login (via Tomo)**                        | ➔ `POST /auth/social-login` → Tomo server returns address |
 | **Wallet Creation**      | If new → creates wallet securely using **TEE-backed** infrastructure | ➔ `POST /wallet/create` → returns wallet address          |
 | **Retrieve Wallet Info** | Shows wallet address, tokens, DAO participation                      | ➔ `GET /wallet/{address}`                                 |
 
