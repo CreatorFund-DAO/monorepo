@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationMenuDemo } from "./navbar";
 
-import { ConnectAndSIWE } from "./ConnectandSIWE";
+import { ConnectAndSIWE } from "./Tomo";
 const Header = ({ 
   NavigationComponent = <NavigationMenuDemo/>, 
   WalletComponent = <ConnectAndSIWE/>, 
