@@ -1,6 +1,6 @@
 ---
 
-#  CreatorFundDAO — API, Tomo, & Frontend Flow
+#  CreatorFundDAO : API, Tomo, & Frontend Flow
 
 ---
 
